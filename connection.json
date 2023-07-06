@@ -1,9 +1,9 @@
 {
-  "account"   : "",
-  "user"      : "",
-  "password"  : "",
-  "role"      : "",
-  "warehouse" : "",
-  "database"  : "",
-  "schema"    : ""
-}
+  "account": "lmrcdbz-kmb46226",
+  "user": "glghol",
+  "password": "GLG_hol_2023!",
+  "role": "ACCOUNTADMIN",
+  "warehouse": "LD_DASH_L",
+  "database": "LD_DASH_DB",
+  "schema": "DASH_SCHEMA"
+  }  
