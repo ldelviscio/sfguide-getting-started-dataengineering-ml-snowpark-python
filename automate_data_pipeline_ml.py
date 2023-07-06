@@ -147,7 +147,7 @@ def create_data_pipeline_ml_tasks(session,resume=False):
   print("Creating root/parent Snowflake Task: data pipeline")
   create_data_pipeline_feature_engineering_task = """
   CREATE OR REPLACE TASK data_pipeline_feature_engineering_task
-      WAREHOUSE = 'DASH_L'
+      WAREHOUSE = 'LD_DASH_L'
       SCHEDULE  = '5 MINUTE'
   AS
       CALL data_pipeline_feature_engineering()
@@ -157,7 +157,7 @@ def create_data_pipeline_ml_tasks(session,resume=False):
   print("Creating child/dependent Snowflake Task: model training")
   create_model_training_task = """
   CREATE OR REPLACE TASK model_training_task
-      WAREHOUSE = 'DASH_L'
+      WAREHOUSE = 'LD_DASH_L'
       AFTER data_pipeline_feature_engineering_task
   AS
       CALL train_revenue_prediction_model('MARKETING_BUDGETS_FEATURES',10,2,0.85,0.85,True)
